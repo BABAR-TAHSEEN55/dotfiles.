@@ -31,6 +31,12 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- vim.keymap.set("i", "<C-c>", "<Esc>")
 -- vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clear search hl", silent = true })
 -- format without prettier using the built in
+-- Normal mode: make Esc clear highlight as well
+vim.keymap.set("n", "<Esc>", function()
+	vim.cmd("nohlsearch")
+	return "<Esc>"
+end, { expr = true, desc = "Clear search highlight", silent = true })
+
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- Unmaps Q in normal mode
