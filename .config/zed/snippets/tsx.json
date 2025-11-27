@@ -1,0 +1,15 @@
+{
+    "Basic React Component": {
+        "prefix": "rafce",
+        "body": [
+            "const ${1:ComponentName} = () => {",
+            "  return (",
+            "    <div></div>",
+            "  )",
+            "}",
+            "",
+            "export default ${1:ComponentName}"
+        ],
+        "description": "Create a basic React functional component"
+    }
+}

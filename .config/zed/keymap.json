@@ -1,0 +1,211 @@
+// Zed keymap for Ubuntu + Vim Mode + Leader Key
+[
+	// Terminal toggle ( Checked )
+	{
+		"context": "Workspace",
+		"bindings": {
+			"ctrl-`": "workspace::ToggleBottomDock"
+		}
+	},
+	// Pane navigation ( Checked )
+	{
+		"context": "Dock || Terminal || Editor",
+		"bindings": {
+			"ctrl-h": "workspace::ActivatePaneLeft",
+			"ctrl-l": "workspace::ActivatePaneRight",
+			"ctrl-k": "workspace::ActivatePaneUp",
+			"ctrl-j": "workspace::ActivatePaneDown"
+		}
+	},
+	{
+		"context": "GitPanel",
+		"bindings": {
+			"q": "git_panel::Close"
+		}
+	},
+	{
+		"context": "AgentPanel",
+		"bindings": {
+			"ctrl-\\": "workspace::ToggleRightDock"
+		}
+	},
+	// File explorer panel (netrw-like)
+	{
+		"context": "ProjectPanel && not_editing",
+		"bindings": {
+			"a": "project_panel::NewFile",
+			"A": "project_panel::NewDirectory",
+			"r": "project_panel::Rename",
+			"d": "project_panel::Delete",
+			"x": "project_panel::Cut",
+			"c": "project_panel::Copy",
+			"p": "project_panel::Paste",
+			// "q": "workspace::ToggleLeftDock",
+			":": "command_palette::Toggle",
+			"%": "project_panel::NewFile",
+			"/": "project_panel::NewSearchInDirectory",
+			"enter": "project_panel::OpenPermanent",
+			"escape": "project_panel::ToggleFocus",
+			"h": "project_panel::CollapseSelectedEntry",
+			"j": "menu::SelectNext",
+			"k": "menu::SelectPrevious",
+			"l": "project_panel::ExpandSelectedEntry",
+			"o": "project_panel::OpenPermanent",
+			"shift-d": "project_panel::Delete",
+			"shift-r": "project_panel::Rename",
+			"t": "project_panel::OpenPermanent",
+			"v": "project_panel::OpenPermanent",
+			"shift-g": "menu::SelectLast",
+			"g g": "menu::SelectFirst",
+			"-": "project_panel::SelectParent",
+			"ctrl-6": "pane::AlternateFile"
+		}
+	},
+	// Empty pane, leader keybindings
+	{
+		"context": "EmptyPane || SharedScreen",
+		"bindings": {
+			"space f f": "file_finder::Toggle",
+			"space f n": "workspace::NewFile",
+			"space f p": "projects::OpenRecent",
+			"space s g": "workspace::NewSearch",
+			"space q q": "zed::Quit"
+		}
+	},
+	// Editor with Vim mode
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
+			"space r n": "editor::Rename",
+			"space a a": "agent::ToggleFocus",
+			"ctrl-\\": "workspace::ToggleLeftDock",
+			// "ctrl-k": "workspace::ToggleRightDock",
+			"space a e": "assistant::InlineAssist",
+			// "ctrl-l": "assistant::InlineAssist",
+			// "space a t": "workspace::ToggleRightDock",
+
+			// Git
+			"space g g": [
+				"task::Spawn",
+				{
+					"task_name": "lazygit",
+					"reveal_target": "center"
+				}
+			],
+			"space g h d": "editor::ExpandAllDiffHunks",
+			"space g h D": "git::Diff",
+			"space g h r": "git::Restore",
+			"space g h R": "git::RestoreFile",
+			"space g b": "git::Blame",
+
+			// Inlay hints / wrap
+			"space u i": "editor::ToggleInlayHints",
+			"space u w": "editor::ToggleSoftWrap",
+
+			// Markdown preview
+			"space m p": "markdown::OpenPreview",
+			"space m P": "markdown::OpenPreviewToTheSide",
+
+			// Search & file nav
+			// "space s w": "buffer_search::Deploy",
+			// "space s W": "pane::DeploySearch",
+			// "space s b": "vim::Search",
+			"space s g": "workspace::NewSearch",
+			// "space f f": "file_finder::Toggle",
+			"space space": "file_finder::Toggle",
+			"space f p": "projects::OpenRecent",
+
+			// Pane management ( Check From Here )
+			"space 1": ["pane::ActivateItem", 0],
+			"space 2": ["pane::ActivateItem", 1],
+			"space 3": ["pane::ActivateItem", 2],
+			"space 4": ["pane::ActivateItem", 3],
+			"space 5": ["pane::ActivateItem", 4],
+			"space 6": ["pane::ActivateItem", 5],
+			"space 7": ["pane::ActivateItem", 6],
+			"space 8": ["pane::ActivateItem", 7],
+			"space 9": ["pane::ActivateItem", 8],
+			"space 0": "pane::ActivateLastItem",
+			"tab": "pane::ActivateNextItem",
+			"shift-tab": "pane::ActivatePreviousItem",
+			"space ,": "tab_switcher::Toggle",
+
+			"space b b": "pane::AlternateFile",
+			"space q": "pane::CloseActiveItem",
+			"space b q": "pane::CloseOtherItems",
+			"space b n": "workspace::NewFile",
+
+			"space c a": "editor::ToggleCodeActions",
+			"space s d": "diagnostics::Deploy",
+			"space s s": "outline::Toggle",
+
+			"space f m": "editor::Format",
+			"space e": "workspace::ToggleRightDock",
+
+			"space t": "workspace::ToggleBottomDock",
+
+			"space s h": "pane::SplitDown",
+			"space s v": "pane::SplitRight",
+			"space -": "pane::SplitDown",
+			"space |": "pane::SplitRight",
+			"space s x": "pane::CloseAllItems",
+			"space w d": "pane::CloseAllItems",
+
+			// Diagnostic + hunk navigation
+			"] h": "editor::GoToHunk",
+			"[ h": "editor::GoToPreviousHunk",
+			"] c": "editor::GoToHunk",
+			"[ c": "editor::GoToPreviousHunk",
+			"] d": "editor::GoToDiagnostic",
+			"[ d": "editor::GoToPreviousDiagnostic",
+			"] e": "editor::GoToDiagnostic",
+			"[ e": "editor::GoToPreviousDiagnostic",
+
+			"] q": "editor::MoveToStartOfNextExcerpt",
+			"[ q": "editor::MoveToStartOfExcerpt"
+		}
+	},
+	// Move line up/down in visual mode
+	{
+		"context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+		"bindings": {
+			"shift-j": "editor::MoveLineDown",
+			"shift-k": "editor::MoveLineUp"
+		}
+	},
+	// Scroll + center cursor
+	{
+		"context": "VimControl && !menu",
+		"bindings": {
+			"ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+			"ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
+			"n": ["workspace::SendKeystrokes", "n z z z"],
+			"shift-n": ["workspace::SendKeystrokes", "shift-n z z z"],
+			"shift-g": ["workspace::SendKeystrokes", "shift-g z z"],
+			"g r": "editor::FindAllReferences"
+		}
+	},
+	// When inside vim `d` operator
+	{
+		"context": "vim_operator == d",
+		"bindings": {
+			"o": "editor::ExpandAllDiffHunks",
+			"r": "git::Restore"
+		}
+	},
+	// Sneak plugin style
+	{
+		"context": "vim_mode == normal || vim_mode == visual",
+		"bindings": {
+			"s": "vim::PushSneak",
+			"S": "vim::PushSneakBackward"
+		}
+	},
+	// Text object motions
+	{
+		"context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+		"bindings": {
+			"b": "vim::AnyBrackets"
+		}
+	}
+]
