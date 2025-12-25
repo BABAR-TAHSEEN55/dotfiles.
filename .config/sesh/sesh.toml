@@ -28,7 +28,7 @@ preview_command = "fastfetch"
 
 [[session]]
 name = "Rules"
-path = "~/Documents/MainObs/00 - Life/Aim/"
+path = "~/Documents/SuhoVault/Life/"
 startup_command = "nvim"
 
 
