@@ -88,6 +88,7 @@ alias tkk='tmux kill-session -t'
 alias bat='batcat'
 alias fn='fdfind'
 alias mux='tmuxinator'
+alias brb='bun run build'
 
 # Neovim test profile
 alias nvim-test='NVIM_APPNAME=nvim-test nvim'
