@@ -230,4 +230,10 @@
 			"space": ["workspace::SendKeystrokes", "space"],
 		},
 	},
+	{
+		"context": "Terminal",
+		"bindings": {
+			"space": ["workspace::SendKeystrokes", "space"],
+		},
+	},
 ]
