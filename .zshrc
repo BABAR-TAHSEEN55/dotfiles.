@@ -54,6 +54,7 @@ alias grep='grep --color=auto'
 alias cls='clear'
 alias cdd='cd ~'
 alias v='nvim'
+alias vim='nvim'
 
 alias ga='git add'
 alias gm='git commit -m'
@@ -85,31 +86,32 @@ alias to='tmux a -t'
 alias tkk='tmux kill-session -t'
 
 # extra aliases you had
-alias bat='batcat'
+
 alias fn='fdfind'
 alias mux='tmuxinator'
 alias brb='bun run build'
 
+# Use this when you different configs 
 # Neovim test profile
-alias nvim-test='NVIM_APPNAME=nvim-test nvim'
+# alias nvim-test='NVIM_APPNAME=nvim-test nvim'
 
 # Never alias vim — function only
-unalias vim 2>/dev/null
-vim() { nvim "$@"; }
+# unalias vim 2>/dev/null
+# vim() { nvim "$@"; }
 
 # Neovim config selector
-qq() {
-  local config
-  config=$(fd --max-depth 1 --glob 'nvim-*' "$HOME/.config" \
-    | fzf --prompt="Neovim Configs > " \
-          --height=50% \
-          --layout=reverse \
-          --border \
-          --exit-0)
-
-  [[ -z "$config" ]] && echo "No config selected" && return
-  NVIM_APPNAME="$(basename "$config")" nvim "$@"
-}
+# qq() {
+#   local config
+#   config=$(fd --max-depth 1 --glob 'nvim-*' "$HOME/.config" \
+#     | fzf --prompt="Neovim Configs > " \
+#           --height=50% \
+#           --layout=reverse \
+#           --border \
+#           --exit-0)
+#
+#   [[ -z "$config" ]] && echo "No config selected" && return
+#   NVIM_APPNAME="$(basename "$config")" nvim "$@"
+# }
 
 
 # SSH AGENT
@@ -178,3 +180,5 @@ fi
 if command -v tmux >/dev/null 2>&1; then
   [[ -z "$TMUX" ]] && exec tmux
 fi
+#TODO: : // Create the install script analyze and make your system more better
+alias code='flatpak run com.visualstudio.code'

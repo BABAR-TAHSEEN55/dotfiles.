@@ -65,7 +65,6 @@
 	{
 		"context": "EmptyPane || SharedScreen",
 		"bindings": {
-			"space f f": "file_finder::Toggle",
 			"space f n": "workspace::NewFile",
 			"space f p": "projects::OpenRecent",
 			"space s g": "workspace::NewSearch",
@@ -79,10 +78,7 @@
 			"space r n": "editor::Rename",
 			"space a a": "agent::ToggleFocus",
 			"ctrl-\\": "workspace::ToggleLeftDock",
-			// "ctrl-k": "workspace::ToggleRightDock",
 			"space a e": "assistant::InlineAssist",
-			// "ctrl-l": "assistant::InlineAssist",
-			// "space a t": "workspace::ToggleRightDock",
 
 			// Git
 			"space g g": [
@@ -112,7 +108,7 @@
 			// "space s b": "vim::Search",
 			"space s g": "workspace::NewSearch",
 			// "space f f": "file_finder::Toggle",
-			"space space": "file_finder::Toggle",
+			"space s f": "file_finder::Toggle",
 			"space f p": "projects::OpenRecent",
 
 			// Pane management ( Check From Here )
@@ -226,6 +222,12 @@
 		"bindings": {
 			"space f m": "editor::Format",
 			"space f r": "workspace::Reload",
+		},
+	},
+	{
+		"context": "Editor && vim_mode == insert",
+		"bindings": {
+			"space": ["workspace::SendKeystrokes", "space"],
 		},
 	},
 ]

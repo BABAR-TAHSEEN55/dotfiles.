@@ -254,6 +254,9 @@
 			"format_on_save": "on",
 		},
 	},
+	"inlay_hints": {
+		"enabled": false,
+	},
 }
 
 /*
