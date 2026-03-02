@@ -1,11 +1,11 @@
-// Zed keymap for Ubuntu + Vim Mode + Leader Key
+// Zed keymap for Fedora/Ubuntu + Vim Mode + Leader Key
 [
 	// Terminal toggle ( Checked )
 	{
 		"context": "Workspace",
 		"bindings": {
-			"ctrl-`": "workspace::ToggleBottomDock"
-		}
+			"ctrl-`": "workspace::ToggleBottomDock",
+		},
 	},
 	// Pane navigation ( Checked )
 	{
@@ -14,20 +14,20 @@
 			"ctrl-h": "workspace::ActivatePaneLeft",
 			"ctrl-l": "workspace::ActivatePaneRight",
 			"ctrl-k": "workspace::ActivatePaneUp",
-			"ctrl-j": "workspace::ActivatePaneDown"
-		}
+			"ctrl-j": "workspace::ActivatePaneDown",
+		},
 	},
 	{
 		"context": "GitPanel",
 		"bindings": {
-			"q": "git_panel::Close"
-		}
+			"q": "git_panel::Close",
+		},
 	},
 	{
 		"context": "AgentPanel",
 		"bindings": {
-			"ctrl-\\": "workspace::ToggleRightDock"
-		}
+			"ctrl-\\": "workspace::ToggleRightDock",
+		},
 	},
 	// File explorer panel (netrw-like)
 	{
@@ -58,8 +58,8 @@
 			"shift-g": "menu::SelectLast",
 			"g g": "menu::SelectFirst",
 			"-": "project_panel::SelectParent",
-			"ctrl-6": "pane::AlternateFile"
-		}
+			"ctrl-6": "pane::AlternateFile",
+		},
 	},
 	// Empty pane, leader keybindings
 	{
@@ -69,8 +69,8 @@
 			"space f n": "workspace::NewFile",
 			"space f p": "projects::OpenRecent",
 			"space s g": "workspace::NewSearch",
-			"space q q": "zed::Quit"
-		}
+			"space q q": "zed::Quit",
+		},
 	},
 	// Editor with Vim mode
 	{
@@ -89,8 +89,8 @@
 				"task::Spawn",
 				{
 					"task_name": "lazygit",
-					"reveal_target": "center"
-				}
+					"reveal_target": "center",
+				},
 			],
 			"space g h d": "editor::ExpandAllDiffHunks",
 			"space g h D": "git::Diff",
@@ -162,16 +162,16 @@
 			"[ e": "editor::GoToPreviousDiagnostic",
 
 			"] q": "editor::MoveToStartOfNextExcerpt",
-			"[ q": "editor::MoveToStartOfExcerpt"
-		}
+			"[ q": "editor::MoveToStartOfExcerpt",
+		},
 	},
 	// Move line up/down in visual mode
 	{
 		"context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
 		"bindings": {
 			"shift-j": "editor::MoveLineDown",
-			"shift-k": "editor::MoveLineUp"
-		}
+			"shift-k": "editor::MoveLineUp",
+		},
 	},
 	// Scroll + center cursor
 	{
@@ -182,30 +182,50 @@
 			"n": ["workspace::SendKeystrokes", "n z z z"],
 			"shift-n": ["workspace::SendKeystrokes", "shift-n z z z"],
 			"shift-g": ["workspace::SendKeystrokes", "shift-g z z"],
-			"g r": "editor::FindAllReferences"
-		}
+			"g r": "editor::FindAllReferences",
+		},
 	},
 	// When inside vim `d` operator
 	{
 		"context": "vim_operator == d",
 		"bindings": {
 			"o": "editor::ExpandAllDiffHunks",
-			"r": "git::Restore"
-		}
+			"r": "git::Restore",
+		},
 	},
 	// Sneak plugin style
 	{
 		"context": "vim_mode == normal || vim_mode == visual",
 		"bindings": {
 			"s": "vim::PushSneak",
-			"S": "vim::PushSneakBackward"
-		}
+			"S": "vim::PushSneakBackward",
+		},
 	},
 	// Text object motions
 	{
 		"context": "vim_operator == a || vim_operator == i || vim_operator == cs",
 		"bindings": {
-			"b": "vim::AnyBrackets"
-		}
-	}
+			"b": "vim::AnyBrackets",
+		},
+	},
+
+	{
+		"context": "Workspace",
+		"bindings": {
+			"space l g": [
+				"task::Spawn",
+				{
+					"task_name": "lazygit fullscreen",
+					"reveal_target": "center",
+				},
+			],
+		},
+	},
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
+			"space f m": "editor::Format",
+			"space f r": "workspace::Reload",
+		},
+	},
 ]
