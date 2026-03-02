@@ -2,7 +2,7 @@
 setopt autocd
 setopt extendedglob
 setopt nomatch
-setopt notify
+ setopt notify
 
 autoload -Uz compinit
 
@@ -77,7 +77,7 @@ alias xx='xdg-open .'
 alias sv='source ~/.zshrc'
 alias vv='nvim ~/.zshrc'
 
-# tmux helpers 
+# tmux helpers
 alias tmux='tmux -u'
 alias tn='tmux new -s'
 alias ts='tmux ls'
@@ -91,7 +91,7 @@ alias fn='fdfind'
 alias mux='tmuxinator'
 alias brb='bun run build'
 
-# Use this when you different configs 
+# Use this when you different configs
 # Neovim test profile
 # alias nvim-test='NVIM_APPNAME=nvim-test nvim'
 
@@ -158,7 +158,7 @@ eval "$(atuin init zsh)"
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
 
-# PROMPT 
+# PROMPT
 
 export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 export STARSHIP_DISABLE_KEYMAP=1
@@ -166,7 +166,7 @@ unset -f zle-keymap-select 2>/dev/null
 eval "$(starship init zsh)"
 
 
-# ZOXIDE 
+# ZOXIDE
 eval "$(zoxide init --cmd cd zsh)"
 
 
@@ -176,7 +176,7 @@ if command -v eza >/dev/null 2>&1; then
 fi
 
 
-# TMUX 
+# TMUX
 if command -v tmux >/dev/null 2>&1; then
   [[ -z "$TMUX" ]] && exec tmux
 fi
