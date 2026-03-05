@@ -274,6 +274,36 @@
 	"inlay_hints": {
 		"enabled": false,
 	},
+
+	"show_edit_predictions": false,
+	"edit_predictions": {
+		"disabled_globs": [
+			"**/.git",
+			"**/.svn",
+			"**/.hg",
+			"**/CVS",
+			"**/.DS_Store",
+			"**/Thumbs.db",
+			"**/.classpath",
+			"**/.settings",
+			"**/.vscode",
+			"**/.idea",
+			"**/node_modules",
+			"**/.serverless",
+			"**/build",
+			"**/dist",
+			"**/coverage",
+			"**/.venv",
+			"**/__pycache__",
+			"**/.ropeproject",
+			"**/.pytest_cache",
+			"**/.ruff_cache",
+		],
+		"copilot": {
+			"proxy": null,
+			"proxy_no_verify": null,
+		},
+	},
 }
 
 /*
