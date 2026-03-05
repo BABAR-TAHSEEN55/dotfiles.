@@ -90,6 +90,10 @@ alias tkk='tmux kill-session -t'
 alias fn='fdfind'
 alias mux='tmuxinator'
 alias brb='bun run build'
+alias ss='supabase start'
+alias sS='supabase stop'
+alias sds='supabase db reset'
+alias db='docker exec -it pg-admin psql -U admin -d postgres'
 
 # Use this when you different configs
 # Neovim test profile

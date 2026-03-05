@@ -132,8 +132,8 @@
 			"space b n": "workspace::NewFile",
 
 			"space c a": "editor::ToggleCodeActions",
-			"space s d": "diagnostics::Deploy",
-			"space s s": "outline::Toggle",
+			// "space s d": "diagnostics::Deploy",
+			// "space s s": "outline::Toggle",
 
 			"space f m": "editor::Format",
 			"space e": "workspace::ToggleRightDock",

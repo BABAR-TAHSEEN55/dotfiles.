@@ -82,7 +82,7 @@
 
 	"auto_indent": false,
 	"auto_indent_on_paste": true,
-	"show_completions_on_input": true,
+	"show_completions_on_input": false,
 	"show_completion_documentation": true,
 	"hover_popover_enabled": true,
 
@@ -116,9 +116,9 @@
 		"tool_permissions": { "default": "allow" },
 		"inline_assistant_model": {
 			"provider": "copilot_chat",
-			"model": "grok-code-fast-1",
+			"model": "claude-sonnet-4.6",
 		},
-		"default_profile": "ask",
+		"default_profile": "write",
 		"dock": "left",
 		"default_model": {
 			"provider": "copilot_chat",
