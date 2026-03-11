@@ -82,7 +82,7 @@
 
 	"auto_indent": false,
 	"auto_indent_on_paste": true,
-	"show_completions_on_input": false,
+	"show_completions_on_input": true,
 	"show_completion_documentation": true,
 	"hover_popover_enabled": true,
 
@@ -118,7 +118,7 @@
 			"provider": "copilot_chat",
 			"model": "claude-sonnet-4.6",
 		},
-		"default_profile": "write",
+		"default_profile": "ask",
 		"dock": "left",
 		"default_model": {
 			"provider": "copilot_chat",

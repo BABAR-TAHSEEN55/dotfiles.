@@ -182,7 +182,9 @@ fi
 
 # TMUX
 if command -v tmux >/dev/null 2>&1; then
-  [[ -z "$TMUX" ]] && exec tmux
+  if [[ -z "$TMUX" && $- == *i* && "$TERM_PROGRAM" != "vscode" ]]; then
+    exec tmux
+  fi
 fi
 #TODO: : // Create the install script analyze and make your system more better
-alias code='flatpak run com.visualstudio.code'
+

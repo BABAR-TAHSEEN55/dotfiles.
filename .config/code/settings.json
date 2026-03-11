@@ -1,0 +1,205 @@
+// {
+//   "window.zoomLevel": 2,
+//   "workbench.colorTheme": "Aura Dracula Spirit (Soft)",
+//   "workbench.iconTheme": "material-icon-theme",
+//   "material-icon-theme.hidesExplorerArrows": true,
+//   "workbench.tree.renderIndentGuides": "none",
+// "workbench.sideBar.location": "right",
+//   "workbench.statusBar.visible": true,
+//   "workbench.editor.showTabs": "single",
+//   "workbench.layoutControl.enabled": false,
+//   "workbench.startupEditor": "none",
+//   "workbench.tips.enabled": false,
+//   "workbench.colorCustomizations": {
+//     "editorSuggestWidget.selectedBackground": "#231739",
+//     "sideBar.background": "#191521",
+//     "list.activeSelectionBackground": "#231739",
+//     "list.inactiveSelectionBackground": "#231739",
+//     "list.focusBackground": "#231739",
+//     "list.hoverBackground": "#231739",
+//     "terminalCursor.foreground": "#C45DFF"
+//   },
+//   "editor.minimap.enabled": false,
+//   "editor.guides.indentation": false,
+//   "editor.renderWhitespace": "none",
+//   "editor.renderLineHighlight": "none",
+//   "editor.matchBrackets": "never",
+//   "editor.lightbulb.enabled": "off",
+//   "editor.hover.enabled": "off",
+//   "editor.showFoldingControls": "never",
+//   "editor.scrollbar.horizontal": "hidden",
+//   "editor.scrollbar.vertical": "hidden",
+//   "editor.overviewRulerBorder": false,
+//   "editor.cursorBlinking": "solid",
+//   "editor.cursorSmoothCaretAnimation": "on",
+//   "editor.tabSize": 2,
+//   "editor.detectIndentation": false,
+//   "editor.fontFamily": "Dank Mono",
+//   "editor.fontSize": 14,
+//   "editor.fontLigatures": true,
+//   "editor.lineHeight": 1.5,
+//   "breadcrumbs.enabled": false,
+//   "explorer.confirmDragAndDrop": false,
+//   "explorer.confirmDelete": false,
+//   "explorer.compactFolders": false,
+//   "git.decorations.enabled": false,
+//   "scm.diffDecorations": "none",
+//   "files.insertFinalNewline": true,
+//   "extensions.ignoreRecommendations": true,
+//   "files.autoSave": "afterDelay",
+//   "terminal.integrated.fontFamily": "Dank Mono, JetBrainsMono Nerd Font",
+//   "terminal.integrated.tabs.enabled": false,
+//   "terminal.integrated.lineHeight": 1.5,
+//   "terminal.integrated.fontSize": 14,
+//   "terminal.integrated.env.osx": {
+//     "FIG_NEW_SESSION": "1"
+//   },
+//   "window.titleBarStyle": "native",
+//   "workbench.activityBar.location": "hidden"
+// }
+{
+  /* ----------------------------- */
+  /* VIM CORE (Your Zed Brain)    */
+  /* ----------------------------- */
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.smartRelativeLine": true,
+  "vim.highlightedyank.enable": true,
+  "vim.surround": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  /* ----------------------------- */
+  /* ZED-STYLE LEADER MAPPINGS    */
+  /* ----------------------------- */
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Esc>"],
+      "commands": [":nohl"],
+      "silent": true
+    },
+    /* Files */
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "n"],
+      "commands": ["workbench.action.files.newUntitledFile"]
+    },
+    {
+      "before": ["<leader>", "f", "p"],
+      "commands": ["workbench.action.openRecent"]
+    },
+    /* Search */
+    {
+      "before": ["<leader>", "s", "g"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "s", "d"],
+      "commands": ["workbench.actions.view.problems"]
+    },
+    /* Pane */
+    {
+      "before": ["<leader>", "s", "v"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["<leader>", "s", "h"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "b", "b"],
+      "commands": ["workbench.action.openPreviousEditor"]
+    },
+    /* Toggle */
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.togglePanel"]
+    },
+    /* Lazygit */
+    {
+      "before": ["<leader>", "g", "g"],
+      "commands": [
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "lazygit\n"
+          }
+        }
+      ]
+    },
+    /* Diagnostics */
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    }
+  ],
+  /* ----------------------------- */
+  /* PANE NAV LIKE ZED            */
+  /* ----------------------------- */
+  /* Add these in keybindings.json instead:
+  ctrl+h → focusLeftGroup
+  ctrl+j → focusBelowGroup
+  ctrl+k → focusAboveGroup
+  ctrl+l → focusRightGroup
+  */
+  /* ----------------------------- */
+  /* PERFORMANCE (ZED FEEL)       */
+  /* ----------------------------- */
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.smoothScrolling": false,
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.scrollBeyondLastLine": false,
+  "editor.renderLineHighlight": "none",
+  "breadcrumbs.enabled": false,
+  "window.commandCenter": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "none",
+  "window.density.editorTabHeight": "compact",
+  /* ----------------------------- */
+  /* COPILOT (QUIET MODE)         */
+  /* ----------------------------- */
+  "github.copilot.inlineSuggest.enable": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "chat.agent.enabled": false,
+  /* GENERAL                      */
+  "files.autoSave": "onWindowChange",
+  "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
+  "git.enableSmartCommit": true,
+  "git.autoStash": true,
+  "git.autofetch": true,
+  "telemetry.telemetryLevel": "off",
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Aura Dracula Spirit",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right"
+}
