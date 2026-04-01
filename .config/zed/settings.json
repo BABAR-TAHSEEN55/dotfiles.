@@ -1,5 +1,25 @@
 {
 	// THEME
+	"outline_panel": {
+  "button": false
+ },
+ "lsp": {
+		"vtsls": {
+			"settings": {
+				"typescript": {
+					"updateImportsOnFileMove": {
+						"enabled": "always",
+					},
+				},
+				"javascript": {
+					"updateImportsOnFileMove": {
+						"enabled": "always",
+					},
+				},
+			},
+			"enable_lsp_tasks": true,
+		},
+	},
 	"icon_theme": "Warm Charmed Icons",
 	"theme": "Aura Dark",
 
@@ -80,7 +100,7 @@
 	// "cursor_shape": "block",
 	"cursor_blink": false,
 
-	"auto_indent": false,
+	"auto_indent": "none",
 	"auto_indent_on_paste": true,
 	"show_completions_on_input": true,
 	"show_completion_documentation": true,
@@ -113,17 +133,16 @@
 	// AGENT CONFIG
 
 	"agent": {
-		"tool_permissions": { "default": "allow" },
-		"inline_assistant_model": {
-			"provider": "copilot_chat",
-			"model": "claude-sonnet-4.6",
+		"button": false,
+  "dock": "left",
+  "default_model": {
+			"effort": "high",
+   "provider": "copilot_chat",
+			"model": "gpt-5.4",
+			"enable_thinking": false,
 		},
-		"default_profile": "ask",
-		"dock": "left",
-		"default_model": {
-			"provider": "copilot_chat",
-			"model": "claude-sonnet-4.6",
-		},
+		"favorite_models": [],
+		"model_parameters": [],
 	},
 
 	// DIAGNOSTICS

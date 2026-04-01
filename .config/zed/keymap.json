@@ -26,7 +26,7 @@
 	{
 		"context": "AgentPanel",
 		"bindings": {
-			"ctrl-\\": "workspace::ToggleRightDock",
+			"ctrl-\\": "workspace::ToggleLeftDock",
 		},
 	},
 	// File explorer panel (netrw-like)
