@@ -94,6 +94,8 @@ alias ss='supabase start'
 alias sS='supabase stop'
 alias sds='supabase db reset'
 alias db='docker exec -it pg-admin psql -U admin -d postgres'
+alias cps="~/scripts/rotate-creds-copilot.sh"
+alias oc="opencode ."
 
 # Use this when you different configs
 # Neovim test profile
@@ -188,3 +190,6 @@ if command -v tmux >/dev/null 2>&1; then
 fi
 #TODO: : // Create the install script analyze and make your system more better
 
+
+# opencode
+export PATH=/home/lelouch/.opencode/bin:$PATH

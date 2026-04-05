@@ -133,12 +133,13 @@
 	// AGENT CONFIG
 
 	"agent": {
-		"button": false,
+		"default_profile": "write",
+  "button": false,
   "dock": "left",
   "default_model": {
 			"effort": "high",
    "provider": "copilot_chat",
-			"model": "gpt-5.4",
+			"model": "gpt-5.3-codex",
 			"enable_thinking": false,
 		},
 		"favorite_models": [],
