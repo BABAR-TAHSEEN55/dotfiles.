@@ -1,6 +1,10 @@
 {
 	// THEME
-	"outline_panel": {
+	"collaboration_panel": {
+  "dock": "left"
+ },
+ "outline_panel": {
+  "dock": "left",
   "button": false
  },
  "lsp": {
@@ -133,16 +137,42 @@
 	// AGENT CONFIG
 
 	"agent": {
-		"default_profile": "write",
+		"inline_assistant_model": {
+   "provider": "copilot_chat",
+   "model": "gpt-5.2-codex",
+   "enable_thinking": false
+  },
+  "default_profile": "ask",
   "button": false,
   "dock": "left",
   "default_model": {
 			"effort": "high",
    "provider": "copilot_chat",
-			"model": "gpt-5.3-codex",
+			"model": "gpt-5.2",
 			"enable_thinking": false,
 		},
-		"favorite_models": [],
+		"favorite_models": [
+   {
+    "provider": "copilot_chat",
+    "model": "gpt-5.3-codex",
+    "enable_thinking": false
+   },
+   {
+    "provider": "copilot_chat",
+    "model": "grok-code-fast-1",
+    "enable_thinking": false
+   },
+   {
+    "provider": "copilot_chat",
+    "model": "gpt-5.2-codex",
+    "enable_thinking": false
+   },
+   {
+    "provider": "copilot_chat",
+    "model": "gpt-5.1",
+    "enable_thinking": false
+   }
+  ],
 		"model_parameters": [],
 	},
 

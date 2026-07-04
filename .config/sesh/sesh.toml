@@ -20,11 +20,6 @@ sort_order = ["tmux", "config", "tmuxinator", "zoxide"]
 
 # common
 
-[[session]]
-name = "fastfetch"
-path = "~/.config/fastfetch"
-startup_command = "fastfetch"
-preview_command = "fastfetch"
 
 [[session]]
 name = "Rules"

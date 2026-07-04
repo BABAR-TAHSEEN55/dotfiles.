@@ -48,13 +48,17 @@ export VISUAL=nvim
 
 # ALIASES
 
+alias ap='ansible-playbook'
+alias ai='ansible-inventory'
 alias ls='ls --color=auto'
+alias goon='gh dash'
 alias ll='ls -lah'
 alias grep='grep --color=auto'
 alias cls='clear'
 alias cdd='cd ~'
 alias v='nvim'
 alias vim='nvim'
+alias lg='lazygit'
 
 alias ga='git add'
 alias gm='git commit -m'
@@ -62,7 +66,7 @@ alias gs='git status'
 alias gll='git log --oneline'
 alias gp='git push'
 
-alias ff='fastfetch'
+alias ff='fastfetch --config my-config'
 alias btop='btop --utf-force'
 alias nf='neofetch'
 
@@ -96,6 +100,7 @@ alias sds='supabase db reset'
 alias db='docker exec -it pg-admin psql -U admin -d postgres'
 alias cps="~/scripts/rotate-creds-copilot.sh"
 alias oc="opencode ."
+alias pro="pnpm run dev"
 
 # Use this when you different configs
 # Neovim test profile
@@ -189,7 +194,11 @@ if command -v tmux >/dev/null 2>&1; then
   fi
 fi
 #TODO: : // Create the install script analyze and make your system more better
+#
+fastfetch --config my-config
 
 
 # opencode
 export PATH=/home/lelouch/.opencode/bin:$PATH
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi

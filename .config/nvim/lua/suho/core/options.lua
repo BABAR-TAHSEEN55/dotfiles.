@@ -59,3 +59,4 @@ vim.opt.mouse = "a"
 
 -- gets rid of line with white spaces
 vim.g.editorconfig = true
+vim.g.root_spec = { "cwd" } -- Forces cwd as root, ignores .git/package.json
