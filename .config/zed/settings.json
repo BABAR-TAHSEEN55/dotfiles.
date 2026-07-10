@@ -1,6 +1,15 @@
 {
 	// THEME
-	"collaboration_panel": {
+	"agent_servers": {
+  "opencode": {
+   "type": "registry",
+   "default_config_options": {
+    "effort": "high",
+    "model": "openai/gpt-5.4"
+   }
+  }
+ },
+ "collaboration_panel": {
   "dock": "left"
  },
  "outline_panel": {

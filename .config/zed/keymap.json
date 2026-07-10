@@ -7,6 +7,56 @@
 			"ctrl-`": "workspace::ToggleBottomDock",
 		},
 	},
+	// {
+
+	// 	"context": "Editor || Terminal",
+	// 	"bindings": {
+	// 		"alt-shift-left": "vim::ResizePaneLeft",
+	// 		"alt-shift-right": "vim::ResizePaneRight",
+	// 		"alt-shift-up": "vim::ResizePaneUp",
+	// 		"alt-shift-down": "vim::ResizePaneDown",
+	// 		"alt-shift-=": "vim::ResetPaneSizes",
+	// 	},
+	// },
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
+			"space s m": "vim::MaximizePane",
+			"alt-h": "vim::ResizePaneLeft",
+			"alt-l": "vim::ResizePaneRight",
+			"alt-j": "vim::ResizePaneDown",
+			"alt-k": "vim::ResizePaneUp",
+			"space s e": "vim::ResetPaneSizes",
+		},
+	},
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
+			"space x w": "diagnostics::Deploy",
+
+			"space x c": "diagnostics::DeployCurrentFile",
+			"space x t": "workspace::NewSearch",
+		},
+	},
+	// {
+	// 	"context": "Workspace",
+	// 	"bindings": {
+	// 		"space x d": "editor::ToggleDiagnostics",
+	// 	},
+	// },
+	{
+		"context": "Editor && VimControl && !VimWaiting && !menu",
+		"bindings": {
+			"space x d": "editor::ToggleInlineDiagnostics",
+		},
+	},
+
+	// {
+	// 	"context": "Diagnostics",
+	// 	"bindings": {
+	// 		"space l x": "diagnostics::ToggleWarnings",
+	// 	},
+	// },
 	// Pane navigation ( Checked )
 	{
 		"context": "Dock || Terminal || Editor",
