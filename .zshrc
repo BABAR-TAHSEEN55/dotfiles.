@@ -73,7 +73,7 @@ alias nf='neofetch'
 alias pn='pnpm run dev'
 alias bro='bun run dev'
 alias uwu='uv run main.py'
-alias dc='docker-compose up'
+alias dc='docker compose up'
 
 alias pp='pip3'
 alias py='python3'
@@ -202,3 +202,6 @@ fastfetch --config my-config
 export PATH=/home/lelouch/.opencode/bin:$PATH
 
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+
+
+

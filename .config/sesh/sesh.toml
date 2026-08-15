@@ -19,6 +19,20 @@ sort_order = ["tmux", "config", "tmuxinator", "zoxide"]
 # preview_command = "eza --all --git --icons --color=always {}"
 
 # common
+# https://chatgpt.com/c/6a56d8ea-ef88-83ee-964d-eaadb02044b4
+
+
+[[session]]
+name = "Pomodoro"
+# path = "~/Downloads"
+startup_command = "pomo"
+
+[[session]]
+name = "ideas"
+# path = ""
+startup_command = "~/scripts/glowwrapper.sh ~/Documents/SuhoVault/Ideas/Project-Ideas.md"
+
+
 
 
 [[session]]

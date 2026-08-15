@@ -1,22 +1,22 @@
 {
 	// THEME
 	"agent_servers": {
-  "opencode": {
-   "type": "registry",
-   "default_config_options": {
-    "effort": "high",
-    "model": "openai/gpt-5.4"
-   }
-  }
- },
- "collaboration_panel": {
-  "dock": "left"
- },
- "outline_panel": {
-  "dock": "left",
-  "button": false
- },
- "lsp": {
+		"opencode": {
+			"type": "registry",
+			"default_config_options": {
+				"effort": "high",
+				"model": "openai/gpt-5.4",
+			},
+		},
+	},
+	"collaboration_panel": {
+		"dock": "left",
+	},
+	"outline_panel": {
+		"dock": "left",
+		"button": false,
+	},
+	"lsp": {
 		"vtsls": {
 			"settings": {
 				"typescript": {
@@ -147,18 +147,18 @@
 
 	"agent": {
 		"inline_assistant_model": {
-   "provider": "copilot_chat",
-   "model": "gpt-5.2-codex",
-   "enable_thinking": false
-  },
-  "default_profile": "ask",
-  "button": false,
-  "dock": "left",
-  "default_model": {
-			"effort": "high",
-   "provider": "copilot_chat",
-			"model": "gpt-5.2",
+			"provider": "copilot_chat",
+			"model": "gpt-5.2-codex",
 			"enable_thinking": false,
+		},
+		"default_profile": "write",
+		"button": false,
+		"dock": "left",
+		"default_model": {
+			"effort": "high",
+			"provider": "zed.dev",
+			"model": "claude-sonnet-4-6",
+			"enable_thinking": true,
 		},
 		"favorite_models": [
    {
@@ -180,6 +180,17 @@
     "provider": "copilot_chat",
     "model": "gpt-5.1",
     "enable_thinking": false
+   },
+   {
+    "provider": "zed.dev",
+    "model": "claude-sonnet-4-6",
+    "enable_thinking": true,
+    "effort": "high"
+   },
+   {
+    "provider": "zed.dev",
+    "model": "claude-sonnet-4-5",
+    "enable_thinking": true
    }
   ],
 		"model_parameters": [],
@@ -255,6 +266,13 @@
 	// LANGUAGE FORMATTERS
 
 	"languages": {
+		"Python": {
+			"tab_size": 4,
+			"hard_tabs": false,
+			"auto_indent": "syntax_aware",
+			"format_on_save": "on",
+			"formatter": "language_server",
+		},
 		"CSS": {
 			"formatter": {
 				"external": {
