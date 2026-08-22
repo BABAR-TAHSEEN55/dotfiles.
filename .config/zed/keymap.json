@@ -7,17 +7,6 @@
 			"ctrl-`": "workspace::ToggleBottomDock",
 		},
 	},
-	// {
-
-	// 	"context": "Editor || Terminal",
-	// 	"bindings": {
-	// 		"alt-shift-left": "vim::ResizePaneLeft",
-	// 		"alt-shift-right": "vim::ResizePaneRight",
-	// 		"alt-shift-up": "vim::ResizePaneUp",
-	// 		"alt-shift-down": "vim::ResizePaneDown",
-	// 		"alt-shift-=": "vim::ResetPaneSizes",
-	// 	},
-	// },
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
@@ -38,12 +27,6 @@
 			"space x t": "workspace::NewSearch",
 		},
 	},
-	// {
-	// 	"context": "Workspace",
-	// 	"bindings": {
-	// 		"space x d": "editor::ToggleDiagnostics",
-	// 	},
-	// },
 	{
 		"context": "Editor && VimControl && !VimWaiting && !menu",
 		"bindings": {
@@ -51,13 +34,6 @@
 		},
 	},
 
-	// {
-	// 	"context": "Diagnostics",
-	// 	"bindings": {
-	// 		"space l x": "diagnostics::ToggleWarnings",
-	// 	},
-	// },
-	// Pane navigation ( Checked )
 	{
 		"context": "Dock || Terminal || Editor",
 		"bindings": {
@@ -275,7 +251,7 @@
 		},
 	},
 	{
-		"context": "Editor && vim_mode == insert",
+		"context": "Editor && vim_mode == insert && !menu && !BufferSearchBar",
 		"bindings": {
 			"space": ["workspace::SendKeystrokes", "space"],
 		},
@@ -291,6 +267,12 @@
 		"bindings": {
 			"z a": "project_panel::CollapseAllEntries",
 			"z r": "project_panel::ExpandSelectedEntry",
+		},
+	},
+	{
+		"context": "Terminal",
+		"bindings": {
+			"space z z": "workspace::ToggleZoom",
 		},
 	},
 ]

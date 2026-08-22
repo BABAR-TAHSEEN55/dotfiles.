@@ -161,38 +161,38 @@
 			"enable_thinking": true,
 		},
 		"favorite_models": [
-   {
-    "provider": "copilot_chat",
-    "model": "gpt-5.3-codex",
-    "enable_thinking": false
-   },
-   {
-    "provider": "copilot_chat",
-    "model": "grok-code-fast-1",
-    "enable_thinking": false
-   },
-   {
-    "provider": "copilot_chat",
-    "model": "gpt-5.2-codex",
-    "enable_thinking": false
-   },
-   {
-    "provider": "copilot_chat",
-    "model": "gpt-5.1",
-    "enable_thinking": false
-   },
-   {
-    "provider": "zed.dev",
-    "model": "claude-sonnet-4-6",
-    "enable_thinking": true,
-    "effort": "high"
-   },
-   {
-    "provider": "zed.dev",
-    "model": "claude-sonnet-4-5",
-    "enable_thinking": true
-   }
-  ],
+			{
+				"provider": "copilot_chat",
+				"model": "gpt-5.3-codex",
+				"enable_thinking": false,
+			},
+			{
+				"provider": "copilot_chat",
+				"model": "grok-code-fast-1",
+				"enable_thinking": false,
+			},
+			{
+				"provider": "copilot_chat",
+				"model": "gpt-5.2-codex",
+				"enable_thinking": false,
+			},
+			{
+				"provider": "copilot_chat",
+				"model": "gpt-5.1",
+				"enable_thinking": false,
+			},
+			{
+				"provider": "zed.dev",
+				"model": "claude-sonnet-4-6",
+				"enable_thinking": true,
+				"effort": "high",
+			},
+			{
+				"provider": "zed.dev",
+				"model": "claude-sonnet-4-5",
+				"enable_thinking": true,
+			},
+		],
 		"model_parameters": [],
 	},
 
@@ -291,56 +291,22 @@
 			},
 		},
 
-		// "JavaScript": {
-		// 	"formatter": {
-		// 		"external": {
-		// 			"command": "pnpm",
-		// 			"arguments": ["exec", "prettier", "--stdin-filepath", "{buffer_path}"],
-		// 		},
-		// 	},
-		// 	"code_actions_on_format": {
-		// 		"source.fixAll.eslint": true,
-		// 	},
-		// 	"format_on_save": "on",
-		// },
-
-		// "TypeScript": {
-		// 	"formatter": {
-		// 		"external": {
-		// 			"command": "pnpm",
-		// 			"arguments": ["exec", "prettier", "--stdin-filepath", "{buffer_path}"],
-		// 		},
-		// 	},
-		// 	"code_actions_on_format": {
-		// 		"source.fixAll.eslint": true,
-		// 	},
-		// 	"format_on_save": "on",
-		// },
-
-		// "TSX": {
-		// 	"formatter": {
-		// 		"external": {
-		// 			"command": "pnpm",
-		// 			"arguments": ["exec", "prettier", "--stdin-filepath", "{buffer_path}"],
-		// 		},
-		// 	},
-		// 	"code_actions_on_format": {
-		// 		"source.fixAll.eslint": true,
-		// 		"source.removeUnusedImports": true,
-		// 	},
-		// 	"format_on_save": "on",
-		// },
-
 		"JavaScript": {
-			"formatter": "language_server",
 			"format_on_save": "on",
+			"code_actions_on_format": {
+				"source.fixAll.eslint": true,
+			},
 		},
+
 		"TypeScript": {
-			"formatter": "language_server",
 			"format_on_save": "on",
+			"code_actions_on_format": {
+				"source.fixAll.eslint": true,
+				"source.removeUnusedImports": true,
+			},
 		},
+
 		"TSX": {
-			"formatter": "language_server",
 			"format_on_save": "on",
 			"code_actions_on_format": {
 				"source.fixAll.eslint": true,
@@ -348,11 +314,12 @@
 			},
 		},
 	},
+
 	"inlay_hints": {
 		"enabled": false,
 	},
 
-	"show_edit_predictions": false,
+	"show_edit_predictions": true,
 	"edit_predictions": {
 		"disabled_globs": [
 			"**/.git",
@@ -387,8 +354,8 @@
 
 //TODO :
 
-1) Check to format on save so that it
-2) Folding of the files should be more faster
+
+
 3) Toggle status bar at will by pressing a shortcuit
 
 */
