@@ -93,6 +93,10 @@
 	"ui_font_family": "JetBrains Mono",
 	"buffer_font_family": "JetBrains Mono",
 	"terminal": {
+		"shell": {
+			"program": "tmux",
+			// "args": ["new-session", "-A", "-s", "main"],
+		},
 		"toolbar": { "breadcrumbs": true },
 		"line_height": "standard",
 		"font_family": "JetBrains Mono",
