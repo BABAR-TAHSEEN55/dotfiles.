@@ -1,6 +1,7 @@
 {
 	// THEME
-	"agent_servers": {
+	"cli_default_open_behavior": "new_window",
+ "agent_servers": {
 		"opencode": {
 			"type": "registry",
 			"default_config_options": {
@@ -41,6 +42,10 @@
 			"editor.document_highlight.read_background": "#00000000",
 			"editor.document_highlight.write_background": "#00000000",
 
+			"vim.yank.background": "#BD9DFF",
+			"editor.indent_guide": "#2a2836",
+			"editor.indent_guide_active": "#BD9DFF",
+
 			"border.variant": "#15141C",
 			"border": "#15141C",
 			"title_bar.background": "#15141C",
@@ -75,7 +80,7 @@
 	},
 
 	"indent_guides": {
-		"enabled": false,
+		"enabled": true,
 		"coloring": "indent_aware",
 	},
 
@@ -159,9 +164,9 @@
 		"button": false,
 		"dock": "left",
 		"default_model": {
-			"effort": "high",
+			"effort": "medium",
 			"provider": "zed.dev",
-			"model": "claude-sonnet-4-6",
+			"model": "gpt-5.5",
 			"enable_thinking": true,
 		},
 		"favorite_models": [

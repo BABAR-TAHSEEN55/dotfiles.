@@ -101,6 +101,7 @@ alias db='docker exec -it pg-admin psql -U admin -d postgres'
 alias cps="~/scripts/rotate-creds-copilot.sh"
 alias oc="opencode ."
 alias pro="pnpm run dev"
+alias wm='workmux'   
 
 # Use this when you different configs
 # Neovim test profile
@@ -206,4 +207,8 @@ if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)
 
 
 
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/lelouch/.local/bin:$PATH"

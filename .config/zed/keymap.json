@@ -73,6 +73,12 @@
 			"ctrl-\\": "workspace::ToggleLeftDock",
 		},
 	},
+	{
+		"context": "AgentPanel > Editor",
+		"bindings": {
+			"ctrl-\\": "workspace::ToggleLeftDock",
+		},
+	},
 
 	//TODO: Shady
 	// File explorer panel (netrw-like)
@@ -114,6 +120,7 @@
 		"bindings": {
 			"space r n": "editor::Rename",
 			"space a e": "assistant::InlineAssist",
+			"ctrl-\\": "workspace::ToggleLeftDock",
 
 			// Git
 			"space g g": [
@@ -242,6 +249,13 @@
 		"bindings": {
 			"ctrl-p": null,
 			"ctrl-n": null,
+		},
+	},
+
+	{
+		"context": "Workspace",
+		"bindings": {
+			"cmd-shift-g": "git_panel::ToggleFocus",
 		},
 	},
 ]
